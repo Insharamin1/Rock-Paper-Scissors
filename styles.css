@@ -1,0 +1,74 @@
+/* Reset some basic styles */
+body, h1, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+/* Set up the body with a background gradient and center content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+}
+
+/* Style the title */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #1d3557;
+}
+
+/* Style the buttons */
+button {
+    background-color: #1d3557;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+/* Style the result area */
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #1d3557;
+}
+
+/* Style the score area */
+#score {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #f1faee;
+    text-shadow: 1px 1px #1d3557;
+}
+
+/* Add a small animation to the result area when updated */
+#result {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
